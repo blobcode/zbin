@@ -8,6 +8,7 @@ use indexmap::IndexMap;
 use maud::{html, Markup};
 use nanoid::nanoid;
 use serde::Deserialize;
+use std::env;
 use std::sync::{Arc, RwLock};
 use tower_http::services::ServeDir;
 
@@ -119,7 +120,10 @@ async fn main() {
     let app = Router::new()
         .nest_service(
             "/static",
-            get_service(ServeDir::new("./static")).handle_error(|error| async move {
+            get_service(ServeDir::new(
+                env::var("STATIC").unwrap_or("./static".to_string()),
+            ))
+            .handle_error(|error| async move {
                 (
                     StatusCode::INTERNAL_SERVER_ERROR,
                     format!("unhandled internal error {}", error),
