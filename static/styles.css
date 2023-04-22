@@ -1,0 +1,57 @@
+html {
+  overflow-y: scroll;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #1b1b1b;
+  color: white;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    max-width: 75%;
+  }
+}
+
+a {
+  color: #78bef8;
+}
+
+.footnote-backref,
+.footnote-ref a {
+  text-decoration: none;
+}
+
+header h1 a {
+  text-decoration: none;
+  color: #c46b30;
+  margin: 0 0 0 -0.33rem;
+  font-size: 4rem;
+  line-height: 0.05;
+  float: left;
+  width: 10rem;
+}
+
+header {
+  padding-bottom: 0.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 0.5rem solid #c46b30;
+}
+
+header nav {
+  float: right;
+  width: 30rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 1rem 1rem 0;
+  float: left;
+}
