@@ -98,7 +98,7 @@ async fn form(
 async fn about() -> Markup {
     html! {(header())
         h1{"about this site"}
-        p{"This site is a simple pastebin-style temporary text hosting site created by "{a href="blobco.de" {"blobcode"}}"."}
+        p{"This site is a simple pastebin-style temporary text hosting site created by "{a href="https://blobco.de" {"blobcode"}}"."}
     }
 }
 
